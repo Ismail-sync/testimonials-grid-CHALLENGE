@@ -1,34 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&family=Dosis:wght@400;700&display=swap');
 
 *{
-    margin: 35px 15px;
+    margin: 0;
     padding: 0;
-    width: 100%;
     box-sizing: border-box;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
 }
-
-body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 500 600;
-    font-size: 13px;
-    text-decoration: none;
-}
-
 :root{
-    --color-ModerateViolet:hsl(263, 55%, 52%);
-    --color-veryDarkgrayBlue: hsl(217, 19%, 35%);
-    --color-veryDark-blackishBlue: hsl(219, 29%, 14%);
-    --color-White: hsl(0, 0%, 100%);
-    --text-lightGray: hsl(0, 0%, 81%);
-    --text-lightGrayish-blue: hsl(210, 46%, 95%);
+    --clr-ModerateViolet:hsl(263, 55%, 52%);
+    --clr-veryDarkgrayBlue: hsl(217, 19%, 35%);
+    --clr-veryDark-blackishBlue: hsl(219, 29%, 14%);
+    --clr-White: hsl(0, 0%, 100%);
+    --txt-lightGray: hsl(0, 0%, 81%);
+    --txt-lightGrayish-blue: hsl(210, 46%, 95%);
+    --fontFamily: 'Barlow Semi Condensed', sans-serif;
+    --fontW: 500;
+    --fontUW:600;
+    --fontS:13px;
+    --fontSSB: 1rem;
 }
+main{
+    margin: 50px 25px
+}
+body{
+    font-family: var(--fontFamily);
+    font-weight: var(--fontW);
+    font-size: var(--fontS);
+    color: var(--clr-veryDark-blackishBlue);
+    text-decoration: none;
+    background-color: var(--txt-lightGrayish-blue);
+}
+hgroup{
+    font-size: var(--fontS);
+}
+.status{
+    opacity: 0.5;
+}
+.lightTxt *{
+    color: var(--txt-lightGray);
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
@@ -37,22 +52,61 @@ body{
  }
 
  .paragraph{
-    font-weight: 600;
+    font-weight: var(--fontUW);
+    font-size: 1.4rem;
  }
+ .qoute{
+    opacity: 0.7;
+ }
+
  img{
     margin-right: 1rem;
     float:left;
     width: 32px;
     aspect-ratio: 1;
     border-radius: 50%;
-    box-shadow: 0 0 0 3px var(--color-ModerateViolet);
+    box-shadow: 0 0 0 3px var(--clr-ModerateViolet);
  }
- /* .testimonial{
-
- } */
+ .testimonial{
+    border-radius: 10px;
+    padding: 1.5rem;
+ }
+ .testimonial > *{
+    margin-bottom: 1rem;
+ }
  .Daniel{
-    background: var(--color-ModerateViolet) url(/images/bg-pattern-quotation.svg);
-    background-size:inherit;
-    background-position: right top;
+    background: var(--clr-ModerateViolet) url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 15% top 5%;
+
+ }
+ .Jonathan{
+    background-color: var(--clr-veryDarkgrayBlue);
+ }
+ .Janette{
+    background-color: var(--clr-White);
+ }
+ .Patrick{
+    background-color: var(--clr-veryDark-blackishBlue);
+ }
+
+
+ @media (min-width: 376px){
+    main{
+        margin: 10rem 7.5rem;
+    }
+    .container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .colSpan2{
+        grid-column: span 2;
+    }
+    article:last-child{
+        grid-row: 1 / span2;
+        grid-column-start: 4;
+     }
 
  }
