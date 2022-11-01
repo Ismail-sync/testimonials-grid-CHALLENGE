@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&family=Dosis:wght@400;700&display=swap');
 
 *{
-    margin: 0;
+    margin: 35px 15px;
     padding: 0;
+    width: 100%;
     box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 body{
@@ -33,9 +41,18 @@ body{
  }
  img{
     margin-right: 1rem;
-    float: left;
+    float:left;
     width: 32px;
     aspect-ratio: 1;
     border-radius: 50%;
     box-shadow: 0 0 0 3px var(--color-ModerateViolet);
+ }
+ /* .testimonial{
+
+ } */
+ .Daniel{
+    background: var(--color-ModerateViolet) url(/images/bg-pattern-quotation.svg);
+    background-size:inherit;
+    background-position: right top;
+
  }
