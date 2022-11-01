@@ -8,7 +8,7 @@
 
 .container {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 :root{
     --clr-ModerateViolet:hsl(263, 55%, 52%);
@@ -93,11 +93,11 @@ hgroup{
 
  @media (min-width: 376px){
     main{
-        margin: 10rem 7.5rem;
+        margin: 11rem 8rem;
     }
     .container{
         display: grid;
-        gap: 1rem;
+        gap: 1.5rem;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
