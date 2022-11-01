@@ -72,7 +72,7 @@ hgroup{
     padding: 1.5rem;
  }
  .testimonial > *{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
  }
  .Daniel{
     background: var(--clr-ModerateViolet) url(/images/bg-pattern-quotation.svg);
